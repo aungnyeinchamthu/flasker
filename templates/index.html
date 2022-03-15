@@ -1,0 +1,22 @@
+<h1>Hello World !</h1>
+<h2>THis Is My First Page</h2>
+<p>Isnt this cool??</p>
+<p>{{ stuff|safe }}</p>
+<p>Favourite Pizza</p>
+{% for topping in favourite_pizza %}
+{{topping|capitalize}}<br />
+{% endfor %}
+<br /><br />
+{{favourite_pizza.2}}
+<br /><br />
+{{favourite_pizza.3+111}}
+<br /><br />
+{% for topping in favourite_pizza %}
+{% if topping == 31 %}
+{{topping+100}}<br />
+{% else %}
+{{topping}}<br />
+{% endif %}
+
+{% endfor %}
+{{favourite_pizza.0 | reverse}}
